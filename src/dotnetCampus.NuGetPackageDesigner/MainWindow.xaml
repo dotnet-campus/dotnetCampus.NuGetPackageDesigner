@@ -4,9 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dotnetCampus.NuGetPackageDesigner"
+        xmlns:themes="clr-namespace:Walterlv.Themes"
+        xmlns:effects="clr-namespace:Walterlv.Effects"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="NuGet Package Designer" Height="450" Width="800"
+        Style="{StaticResource Style.Window.Universal}"
+        Foreground="{StaticResource Brush.Theme}"
+        Background="{StaticResource Brush.Background}">
+    <Window.Resources>
+    </Window.Resources>
+    <themes:UniversalWindowStyle.TitleBar>
+        <themes:UniversalTitleBar ForegroundColor="{StaticResource Color.Foreground}" InactiveForegroundColor="{StaticResource Color.Foreground.Disable}"
+                                  ButtonForegroundColor="{StaticResource Color.Foreground}" ButtonInactiveForegroundColor="{StaticResource Color.Foreground.Disable}"
+                                  ButtonHoverForeground="{StaticResource Color.Foreground}" ButtonHoverBackground="{StaticResource Color.Theme.Light1}"
+                                  ButtonPressedForeground="{StaticResource Color.Foreground}" ButtonPressedBackground="{StaticResource Color.Theme.Dark1}" />
+    </themes:UniversalWindowStyle.TitleBar>
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="40" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="{StaticResource Brush.Theme}" />
+        <ListView Grid.Row="1" BorderThickness="0" Background="{StaticResource Brush.Background.Header}">
+            
+        </ListView>
     </Grid>
 </Window>

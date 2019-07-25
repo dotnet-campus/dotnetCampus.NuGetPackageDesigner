@@ -4,6 +4,32 @@
              xmlns:local="clr-namespace:dotnetCampus.NuGetPackageDesigner"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Walterlv.FluentDesign/Themes/Window.Universal.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Color x:Key="Color.Theme">#01487f</Color>
+            <Color x:Key="Color.Theme.Light1">#0c66ac</Color>
+            <Color x:Key="Color.Theme.Dark1">#00355f</Color>
+            <Color x:Key="Color.Foreground">White</Color>
+            <Color x:Key="Color.Foreground.Disable">#999999</Color>
+            <Color x:Key="Color.Background">#1f1e1e</Color>
+            <Color x:Key="Color.Background.Header">#303033</Color>
+            <Color x:Key="Color.Background.Items">#262526</Color>
+            <Color x:Key="Color.Background.Footer">#303033</Color>
+            <Color x:Key="Color.Background.Float">#3f3f42</Color>
+            <Color x:Key="Color.Background.Control">#6f6f73</Color>
+            <SolidColorBrush x:Key="Brush.Theme" Color="{StaticResource Color.Theme}" />
+            <SolidColorBrush x:Key="Brush.Theme.Light1" Color="{StaticResource Color.Theme.Light1}" />
+            <SolidColorBrush x:Key="Brush.Theme.Dark1" Color="{StaticResource Color.Theme.Dark1}" />
+            <SolidColorBrush x:Key="Brush.Foreground" Color="{StaticResource Color.Foreground}" />
+            <SolidColorBrush x:Key="Brush.Foreground.Disable" Color="{StaticResource Color.Foreground.Disable}" />
+            <SolidColorBrush x:Key="Brush.Background" Color="{StaticResource Color.Background}" />
+            <SolidColorBrush x:Key="Brush.Background.Header" Color="{StaticResource Color.Background.Header}" />
+            <SolidColorBrush x:Key="Brush.Background.Items" Color="{StaticResource Color.Background.Items}" />
+            <SolidColorBrush x:Key="Brush.Background.Footer" Color="{StaticResource Color.Background.Footer}" />
+            <SolidColorBrush x:Key="Brush.Background.Float" Color="{StaticResource Color.Background.Float}" />
+            <SolidColorBrush x:Key="Brush.Background.Control" Color="{StaticResource Color.Background.Control}" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
