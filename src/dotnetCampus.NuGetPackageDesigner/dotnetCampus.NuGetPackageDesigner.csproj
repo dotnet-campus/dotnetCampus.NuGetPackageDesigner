@@ -6,8 +6,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="lindexi.wpf.Framework" Version="3.0.1" />
-  </ItemGroup>
-
 </Project>
