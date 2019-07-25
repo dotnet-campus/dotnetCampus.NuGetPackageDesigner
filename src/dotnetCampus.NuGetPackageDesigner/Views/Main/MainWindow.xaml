@@ -10,7 +10,7 @@
         mc:Ignorable="d"
         Title="NuGet Package Designer"
         Style="{StaticResource Style.Window.Universal}"
-        Foreground="{StaticResource Brush.Theme}"
+        Foreground="{StaticResource Brush.Foreground}"
         Background="{StaticResource Brush.Background}">
     <Window.DataContext>
         <main:MainViewModel />

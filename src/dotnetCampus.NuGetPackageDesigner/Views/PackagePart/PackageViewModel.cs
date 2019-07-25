@@ -2,7 +2,7 @@
 
 namespace dotnetCampus.NuGetPackageDesigner.Views.Main
 {
-    public class ProjectViewModel : BindableObject
+    public class PackageViewModel : BindableObject
     {
     }
 }

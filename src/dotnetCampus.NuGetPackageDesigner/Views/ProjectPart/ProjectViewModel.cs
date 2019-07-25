@@ -3,23 +3,25 @@ using dotnetCampus.NuGetPackageDesigner.Framework;
 
 namespace dotnetCampus.NuGetPackageDesigner.Views.Main
 {
-    public class PackageViewModel : BindableObject
+    public class ProjectViewModel : BindableObject
     {
-        private string _projectFile;
+        private string _projectPath;
         private string _projectFolder;
         private string _projectName;
 
-        public PackageViewModel()
+        public ProjectViewModel()
         {
+            ProjectPath = @"D:\Developments\Open\dotnetCampus.NuGetPackageDesigner\src\dotnetCampus.NuGetPackageDesigner\dotnetCampus.NuGetPackageDesigner.csproj";
         }
 
-        public string ProjectFile
+        public string ProjectPath
         {
-            get => _projectFile;
+            get => _projectPath;
             set
             {
-                SetValue(ref _projectFile, value);
-                ProjectFolder = Path.GetDirectoryName(_projectFile);
+                SetValue(ref _projectPath, value);
+                ProjectFolder = Path.GetDirectoryName(_projectPath);
+                ProjectName = Path.GetFileNameWithoutExtension(_projectPath);
             }
         }
 
