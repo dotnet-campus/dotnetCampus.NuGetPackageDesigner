@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using dotnetCampus.NuGetPackageDesigner.Framework.Views;
+using dotnetCampus.NuGetPackageDesigner.Framework;
 
 namespace dotnetCampus.NuGetPackageDesigner.Views.Main
 {
@@ -8,6 +8,10 @@ namespace dotnetCampus.NuGetPackageDesigner.Views.Main
         private string _projectFile;
         private string _projectFolder;
         private string _projectName;
+
+        public ProjectViewModel()
+        {
+        }
 
         public string ProjectFile
         {

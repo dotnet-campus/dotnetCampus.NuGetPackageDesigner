@@ -3,14 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:dotnetCampus.NuGetPackageDesigner"
         xmlns:themes="clr-namespace:Walterlv.Themes"
         xmlns:effects="clr-namespace:Walterlv.Effects"
+        xmlns:main="clr-namespace:dotnetCampus.NuGetPackageDesigner.Views.Main"
+        xmlns:navi="clr-namespace:dotnetCampus.NuGetPackageDesigner.Framework.Navigating"
         mc:Ignorable="d"
         Title="NuGet Package Designer" Height="450" Width="800"
         Style="{StaticResource Style.Window.Universal}"
         Foreground="{StaticResource Brush.Theme}"
         Background="{StaticResource Brush.Background}">
+    <Window.DataContext>
+        <main:MainViewModel />
+    </Window.DataContext>
     <Window.Resources>
     </Window.Resources>
     <themes:UniversalWindowStyle.TitleBar>
@@ -26,8 +30,48 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Background="{StaticResource Brush.Theme}" />
-        <ListView Grid.Row="1" BorderThickness="0" Background="{StaticResource Brush.Background.Header}">
-            
+        <ListView x:Name="NavigationListView" Grid.Row="1"
+                  BorderThickness="0" Background="{StaticResource Brush.Background.Header}"
+                  ItemsSource="{Binding PageItems}">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Margin="40 0" Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="FontSize" Value="16" />
+                    <Setter Property="Foreground" Value="{StaticResource Brush.Foreground}" />
+                    <Setter Property="Background" Value="{StaticResource Brush.Theme}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <Border x:Name="Bd" MinWidth="80" Padding="20 0"
+                                        BorderBrush="{TemplateBinding Background}"
+                                        Background="Transparent">
+                                    <ContentPresenter x:Name="Cp"
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Bd" Property="BorderThickness" Value="0 0 0 4" />
+                                        <Setter TargetName="Cp" Property="Margin" Value="0 0 0 -4" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate DataType="navi:NavigationItem">
+                    <TextBlock Text="{Binding Title}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
+        <Border Grid.Row="2" d:DataContext="{d:DesignData navi:NavigationItem}"
+                DataContext="{Binding SelectedItem, Source={x:Reference NavigationListView}}">
+            <ContentPresenter Content="{Binding View}" />
+        </Border>
     </Grid>
 </Window>

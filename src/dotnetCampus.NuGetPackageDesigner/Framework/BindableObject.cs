@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace dotnetCampus.NuGetPackageDesigner.Framework.Views
+namespace dotnetCampus.NuGetPackageDesigner.Framework
 {
     /// <summary>
     /// 表示可绑定的对象，在此类型的派生类中按约定定义的属性支持绑定。
