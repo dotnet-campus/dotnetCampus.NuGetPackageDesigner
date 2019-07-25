@@ -8,13 +8,13 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Walterlv.FluentDesign/Themes/Window.Universal.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <Color x:Key="Color.Theme">#01487f</Color>
+            <Color x:Key="Color.Theme">#004880</Color>
             <Color x:Key="Color.Theme.Light1">#0c66ac</Color>
             <Color x:Key="Color.Theme.Dark1">#00355f</Color>
             <Color x:Key="Color.Foreground">White</Color>
             <Color x:Key="Color.Foreground.Disable">#999999</Color>
-            <Color x:Key="Color.Background">#1f1e1e</Color>
-            <Color x:Key="Color.Background.Header">#303033</Color>
+            <Color x:Key="Color.Background">#232323</Color>
+            <Color x:Key="Color.Background.Header">#323232</Color>
             <Color x:Key="Color.Background.Items">#262526</Color>
             <Color x:Key="Color.Background.Footer">#303033</Color>
             <Color x:Key="Color.Background.Float">#3f3f42</Color>
