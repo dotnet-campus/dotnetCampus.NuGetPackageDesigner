@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace dotnetCampus.NuGetPackageDesigner
+namespace dotnetCampus.NuGetPackageDesigner.Views.Main
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
