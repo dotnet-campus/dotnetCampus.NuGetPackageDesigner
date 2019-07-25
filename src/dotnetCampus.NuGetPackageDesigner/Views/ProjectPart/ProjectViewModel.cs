@@ -3,13 +3,13 @@ using dotnetCampus.NuGetPackageDesigner.Framework;
 
 namespace dotnetCampus.NuGetPackageDesigner.Views.Main
 {
-    public class ProjectViewModel : BindableObject
+    public class PackageViewModel : BindableObject
     {
         private string _projectFile;
         private string _projectFolder;
         private string _projectName;
 
-        public ProjectViewModel()
+        public PackageViewModel()
         {
         }
 
