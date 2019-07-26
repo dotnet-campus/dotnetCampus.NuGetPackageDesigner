@@ -16,7 +16,7 @@
             <Color x:Key="Color.Background">#232323</Color>
             <Color x:Key="Color.Background.Header">#323232</Color>
             <Color x:Key="Color.Background.Items">#262526</Color>
-            <Color x:Key="Color.Background.Footer">#303033</Color>
+            <Color x:Key="Color.Background.Footer">#323232</Color>
             <Color x:Key="Color.Background.Float">#3f3f42</Color>
             <Color x:Key="Color.Background.Control">#6f6f73</Color>
             <SolidColorBrush x:Key="Brush.Theme" Color="{StaticResource Color.Theme}" />
