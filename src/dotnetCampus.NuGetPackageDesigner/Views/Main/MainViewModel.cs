@@ -1,6 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using dotnetCampus.NuGetPackageDesigner.Framework;
-using dotnetCampus.NuGetPackageDesigner.Framework.Navigating;
 using dotnetCampus.NuGetPackageDesigner.Views.AdvancePart;
 using dotnetCampus.NuGetPackageDesigner.Views.CodePart;
 using dotnetCampus.NuGetPackageDesigner.Views.CommandPart;
@@ -8,6 +6,8 @@ using dotnetCampus.NuGetPackageDesigner.Views.FilePart;
 using dotnetCampus.NuGetPackageDesigner.Views.OutputPart;
 using dotnetCampus.NuGetPackageDesigner.Views.PackagePart;
 using dotnetCampus.NuGetPackageDesigner.Views.ProjectPart;
+using Walterlv.ComponentModel;
+using Walterlv.Windows.Navigating;
 
 namespace dotnetCampus.NuGetPackageDesigner.Views.Main
 {

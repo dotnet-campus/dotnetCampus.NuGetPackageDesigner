@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Walterlv.FluentDesign/Themes/Window.Universal.xaml" />
+                <ResourceDictionary Source="/Window.Universal.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <Color x:Key="Color.Theme">#004880</Color>
             <Color x:Key="Color.Theme.Light1">#0c66ac</Color>

@@ -2,8 +2,14 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <UseWPF>true</UseWPF>
+    <BaseOutputPath>..\..\bin</BaseOutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Walterlv.Windows.Framework.Source" Version="0.1.0-alpha" />
+    <PackageReference Include="Walterlv.Themes.FluentDesign.Source" Version="0.1.0-alpha" />
+  </ItemGroup>
 
 </Project>
